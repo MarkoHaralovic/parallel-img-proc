@@ -3,7 +3,7 @@ import cupy as cp
 from scipy.fftpack import fft2, ifft2
 from skimage.restoration import denoise_nl_means, estimate_sigma
 from skimage.registration import phase_cross_correlation
-from scipy.ndimage import convolve
+from cupyx.scipy.signal import convolve2d
 from skimage.restoration import inpaint
 import pywt
 from skimage.util import view_as_windows
@@ -31,14 +31,14 @@ def perform_convolution(image, kernel):
     if image.ndim == 3 and kernel.ndim == 2:
         if isinstance(image, cp.ndarray):
             kernel = cp.asarray(kernel)
-            return cp.stack([cp.ndimage.convolve(channel, kernel) for channel in cp.rollaxis(image, -1)])
+            return cp.stack([convolve2d(channel, kernel) for channel in cp.rollaxis(image, -1)])
         else:
-            return np.stack([convolve(channel, kernel) for channel in np.rollaxis(image, -1)])
+            return np.stack([convolve2d(channel.get(), kernel.get()) for channel in np.rollaxis(image, -1)])
     elif image.ndim == 2:
         if isinstance(image, cp.ndarray):
             kernel = cp.asarray(kernel)
-            return cp.ndimage.convolve(image, kernel)
-        return convolve(image, kernel)
+            return convolve2d(image, kernel)
+        return convolve2d(image, kernel)
     else:
         raise ValueError("Unexpected image dimensions")
 
@@ -72,6 +72,7 @@ def sliding_window_detection(image, window_size, step_size, classifier):
     """
     
     if len(image.shape) == 3:
+        print(type(image))
         image = rgb2gray(image)
     
     windows = view_as_windows(image, window_size, step=step_size)
