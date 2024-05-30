@@ -1,5 +1,8 @@
 from abc import ABC, abstractmethod
 from tqdm import tqdm
+from skimage.color import rgb2gray
+import cupy
+
 
 class Tester(ABC):
    @abstractmethod
@@ -14,8 +17,12 @@ class FunctionTester(Tester):
       self.function = function
       self.images = images
       self.time_sync_function = time_sync_function
-   def calculate_time(self,device_func:callable):
-
+   def calculate_time(self,device_func:callable, operation_name = None):
+      if operation_name == 'Sliding Window Detection':
+         for image in self.images:
+            image = image.get()
+            image = rgb2gray(image)
+            image = cupy.asarray(image)
       t1 = self.time_sync_function()
       for image in tqdm(self.images):
          image = device_func(image)
