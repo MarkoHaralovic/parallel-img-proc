@@ -66,7 +66,7 @@ data.append(calculate_and_store_times(wavelet_tester, np.array, "Wavelet Transfo
 data.append(calculate_and_store_times(convolution_tester, np.array, "Convolution", "CPU"))
 data.append(calculate_and_store_times(denoising_tester, np.array, "NL-means Denoising", "CPU"))
 data.append(calculate_and_store_times(registration_tester, np.array, "Image Registration", "CPU"))
-data.append(calculate_and_store_times(sliding_window_tester, np.array, "Sliding Window Detection", "CPU"))
+# data.append(calculate_and_store_times(sliding_window_tester, np.array, "Sliding Window Detection", "CPU"))
 data.append(calculate_and_store_times(inpainting_tester, np.array, "Inpainting", "CPU"))
 data.append(calculate_and_store_times(mean_std_tester, np.array, "Mean and Std", "CPU"))
 
@@ -76,7 +76,7 @@ data.append(calculate_and_store_times(wavelet_tester, cp.array, "Wavelet Transfo
 data.append(calculate_and_store_times(convolution_tester, cp.array, "Convolution", "GPU"))
 data.append(calculate_and_store_times(denoising_tester, cp.array, "NL-means Denoising", "GPU"))
 data.append(calculate_and_store_times(registration_tester, cp.array, "Image Registration", "GPU"))
-data.append(calculate_and_store_times(sliding_window_tester, cp.array, "Sliding Window Detection", "GPU"))
+# data.append(calculate_and_store_times(sliding_window_tester, cp.array, "Sliding Window Detection", "GPU"))
 data.append(calculate_and_store_times(inpainting_tester, cp.array, "Inpainting", "GPU"))
 data.append(calculate_and_store_times(mean_std_tester, cp.array, "Mean and Std", "GPU"))
 # exit()
