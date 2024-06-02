@@ -40,9 +40,6 @@ def image_registration_wrapper(image):
 registration_tester = FunctionTester()
 registration_tester.init(images, time_synchronize, image_registration_wrapper)
 
-sliding_window_tester = FunctionTester()
-sliding_window_tester.init(images, time_synchronize, lambda img: sliding_window_detection(img, (64, 64), 32, dummy_classifier))
-
 inpainting_tester = FunctionTester()
 mask = np.zeros(image1.shape, dtype=bool)
 mask[100:150, 100:150] = True
@@ -51,7 +48,7 @@ inpainting_tester.init(images[0:5], time_synchronize, lambda img: perform_inpain
 mean_std_tester = FunctionTester()
 mean_std_tester.init(images, time_synchronize, mean_and_std)
 
-def calculate_and_store_times(tester, device_func, operation_name, device_name,image_shape=image_shape):
+def calculate_and_store_times(tester, device_func, operation_name, device_name,image_shape):
     print(f"running {operation_name} on {device_name}...\n")
     execution_time = tester.calculate_time(device_func, operation_name)
     num_images = len(tester.images) 
@@ -66,7 +63,6 @@ data.append(calculate_and_store_times(wavelet_tester, np.array, "Wavelet Transfo
 data.append(calculate_and_store_times(convolution_tester, np.array, "Convolution", "CPU"))
 data.append(calculate_and_store_times(denoising_tester, np.array, "NL-means Denoising", "CPU"))
 data.append(calculate_and_store_times(registration_tester, np.array, "Image Registration", "CPU"))
-# data.append(calculate_and_store_times(sliding_window_tester, np.array, "Sliding Window Detection", "CPU"))
 data.append(calculate_and_store_times(inpainting_tester, np.array, "Inpainting", "CPU"))
 data.append(calculate_and_store_times(mean_std_tester, np.array, "Mean and Std", "CPU"))
 
@@ -76,10 +72,9 @@ data.append(calculate_and_store_times(wavelet_tester, cp.array, "Wavelet Transfo
 data.append(calculate_and_store_times(convolution_tester, cp.array, "Convolution", "GPU"))
 data.append(calculate_and_store_times(denoising_tester, cp.array, "NL-means Denoising", "GPU"))
 data.append(calculate_and_store_times(registration_tester, cp.array, "Image Registration", "GPU"))
-# data.append(calculate_and_store_times(sliding_window_tester, cp.array, "Sliding Window Detection", "GPU"))
 data.append(calculate_and_store_times(inpainting_tester, cp.array, "Inpainting", "GPU"))
 data.append(calculate_and_store_times(mean_std_tester, cp.array, "Mean and Std", "GPU"))
-# exit()
+
 with open('times_cpu_gpu.csv', mode='w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(['Operation', 'Time', 'Device', 'Number of Images', 'Image Shape'])

@@ -72,10 +72,10 @@ def sliding_window_detection(image, window_size, step_size, classifier):
     - detections: List of tuples (x, y, window, classification).
     """
     
-    # if len(image.shape) == 3:
-    #     print(type(image))
-    #     image = rgb2gray(image)
-    #
+    if len(image.shape) == 3:
+        print(type(image))
+        image = rgb2gray(image)
+    
     windows = view_as_windows(image, window_size, step=step_size)
     detections = []
 

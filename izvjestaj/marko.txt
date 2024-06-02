@@ -1,0 +1,29 @@
+# OPIS 
+U sklopu ovog dijela projekta implementirali smo niz funkcija za obradu slika NumPy i CuPy. 
+Osnovni cilj bio je usporediti performanse obrade slika na centralnoj procesorskoj jedinici (CPU) i grafičkoj procesorskoj jedinici (GPU).
+Razvijen je FunctionTester razred za testiranje performansi pojedinih funkcija na listi slika.
+
+FunctionTester je apstraktni razred koji nasljeđuje od Tester. Sadrži dvije ključne metode:
+    - init(self, images, time_sync_function, function):
+        -  Inicijalizacija s popisom slika, funkcijom za sinkronizaciju vremena i funkcijom za testiranje.
+    - calculate_time(self, device_func, operation_name=None): 
+        - Računa vrijeme potrebno za obradu slika koristeći zadani uređaj i funkciju.
+
+
+Implementirane funkcije za obradu slika uključuju:
+    - Fourierova i inverzna Fourierova transformacija 
+    - Wavelet transformacija - Transformacija koristi wavelete za dekompoziciju slike na više razina. To omogućuje analizu slike na različitim razinama detalja, što je korisno u aplikacijama poput kompresije slika i uklanjanja šuma. Koristi PyWavelets za izvođenje transformacije.
+    - Konvolucija - Ova funkcija primjenjuje konvolucijsku jezgru na slici za izvođenje raznih operacija kao što su izoštravanje, zamućenje, detekcija rubova itd. 
+    - Smanjenje šuma pomoću metode ne-lokalnih sredina -Algoritam uspoređuje sve dijelove slike kako bi procijenio količinu šuma.
+    - Registracija slika - Ova funkcija izračunava optimalno poravnanje između dvije slike koristeći faznu korelaciju križanja. 
+    - Inpainting - Funkcija inpainting koristi se za popravak oštećenih ili nedostajućih dijelova slika. Tehnika biharmonic inpaintinga koristi se za glatko ispunjavanje praznina na temelju informacija iz okolnih područja slike.
+    - Računanje srednje vrijednosti i standardne devijacije (mean_and_std) - Funkcija izračunava srednju vrijednost i standardnu devijaciju svakog kanala slike.
+
+Svaka funkcija testirana je na CPU i GPU za usporedbu performansi, a mjerenje vremena izvedbe omogućeno je funkcijom time_synchronize.
+
+# REZULTATI
+
+Rezultati su pohranjeni u CSV datoteku times_cpu_gpu.csv, koja sadrži detalje o izvođenju operacija, vremenu izvođenja, 
+uređaju (CPU ili GPU), broju obrađenih slika i dimenzijama slika. 
+Uočeno je značajno poboljšanje performansi prilikom korištenja GPU za operacije koje su intenzivne na matematičkim operacijama, 
+poput Fourierove transformacije i konvolucije.
