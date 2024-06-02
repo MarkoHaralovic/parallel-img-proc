@@ -63,8 +63,8 @@
         
         \begin{figure}[H]
         	\centering
-        	\includegraphics[width=0.9\linewidth]{slike/CPU-vs-GPU.jpg}
-        	\caption{Pojednostavljeni prikaz CPU (lijevo) i GPU (desno) \cite{Canny}}
+        	\includegraphics[width=0.7\linewidth]{slike/CPU-vs-GPU.jpg}
+        	\caption{Pojednostavljeni prikaz CPU (lijevo) i GPU (desno) \cite{GPUvsCPU}}
         	\label{fig:cpu_vs_gpu}
         \end{figure}
         
@@ -81,7 +81,7 @@
         	\label{fig:data_to_gpu}
         \end{figure}
         
-	\section{Pregled implementacija metoda za obradu slika pomoću NVIDIA CUDA tehnologije}
+	\section{Pregled implementiranih metoda za obradu slika pomoću NVIDIA CUDA tehnologije}
 	
 	\subsection{Usporedba matričnog množenja na CPU i GPU te primjena nad transformacijama slike}
 	
@@ -267,19 +267,19 @@
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.9\linewidth]{slike/cnn_training_time_comparison.png} 
+		\includegraphics[width=1\linewidth]{slike/cnn_training_time_comparison.png} 
 		\caption{Prikaz usporedbe vremena treniranja modela koji se izvršavaju na procesoru i na grafičkoj kartici.}
 		\label{fig:cnn_training_time_comparison}
 	\end{figure} 
 
         \subsection{Ostale metode obrade slika}
         
-        Na slici \ref{fig:ostale_metode} uspoređena su vremena izvođenja na CPU i na GPU Fourierove transformacije, inverzne Fourierove transformacije, Valćine transformacije, konvolucije, uklanjanja šuma, registracija slika, računanja prosječne vrijednosti i standardne devijacije.
+        Na slici \ref{fig:ostale_metode} uspoređena su vremena izvođenja na CPU i na GPU Fourierove transformacije, inverzne Fourierove transformacije, Valćine transformacije, konvolucije, uklanjanja šuma, registracija slika, računanja prosječne vrijednosti i standardne devijacije. Takođjer je zapisan broj slika na kojima se izršilo mjerenje.
         
 		\begin{figure}[H]
 			\centering
-			\includegraphics[width=0.6\linewidth]{slike/ostale_metode_usporedba.jpg} 
-			\caption{Implementacija metoda za obradu slike. Za svaku metodu tablica prikazuje vrijeme izvođenja na CPU i na GPU.}
+			\includegraphics[width=1.05\linewidth]{slike/times_other.png} 
+			\caption{Za svaku metodu tablica prikazuje vrijeme izvođenja na CPU i na GPU.}
 			\label{fig:ostale_metode}
 		\end{figure} 
 				
