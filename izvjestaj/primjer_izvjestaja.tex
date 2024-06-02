@@ -248,7 +248,7 @@
         	\label{fig:k_means_CPU_GPU}
         \end{figure}
         
-        Rezultati grupiranja se vide na slikama \ref{fig:k_means_CPU_GPU}, a vremena provođenja metode u odnosu na veličinu slika se mogu vidjeti na slici \ref{fig:k_means_timing}. Iz rezultata mjerenja vidimo da je k-means grupiranje jako povoljna metoda za paralelizaciju. Različite jezgre GPU-a mogu biti zadužene za izračunavanje udaljenosti između jednog podatka i svih centroida i paralelno se mogu ažurirati centroide.
+        Rezultati grupiranja se vide na slikama \ref{fig:k_means_CPU_GPU}, a vremena provođenja metode u odnosu na veličinu slika se mogu vidjeti na slici \ref{fig:k_means_timing}. S time da inicijalne centroide generiramo nasumično vidljive su manje promjene u rezultatima. Iz rezultata mjerenja vidimo da je k-means grupiranje jako povoljna metoda za paralelizaciju. Različite jezgre GPU-a mogu biti zadužene za izračunavanje udaljenosti između jednog podatka i svih centroida i paralelno se mogu ažurirati centroide.
         
         \begin{figure}[H]
         	\centering
