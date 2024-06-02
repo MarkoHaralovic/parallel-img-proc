@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.4)  31 MAY 2024 13:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.4)  2 JUN 2024 22:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -61,13 +61,89 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen141
+)) (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.st
+y
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen142
+) (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count194
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count195
+\leftroot@=\count196
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count197
+\DOTSCASE@=\count198
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen143
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count199
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count266
+\dotsspace@=\muskip16
+\c@parentequation=\count267
+\dspbrk@lvl=\count268
+\tag@help=\toks18
+\row@=\count269
+\column@=\count270
+\maxfields@=\count271
+\andhelp@=\toks19
+\eqnshift@=\dimen144
+\alignsep@=\dimen145
+\tagshift@=\dimen146
+\tagwidth@=\dimen147
+\totwidth@=\dimen148
+\lineht@=\dimen149
+\@envbody=\toks20
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/tocbibind\tocbibind.
+sty
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has section divisions on input line 50.
+
+
+Package tocbibind Note: Using section or other style headings.
+
+)
 (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.st
 y
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
 (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks17
+\KV@toks@=\toks22
 )
 (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.st
 y
@@ -85,8 +161,8 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen141
-\Gin@req@width=\dimen142
+\Gin@req@height=\dimen150
+\Gin@req@width=\dimen151
 )
 (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.st
 y
@@ -148,16 +224,16 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count194
+\c@section@level=\count272
 )
 (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.st
 y
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count195
+\etb@tempcnta=\count273
 )
-\@linkdim=\dimen143
-\Hy@linkcounter=\count196
-\Hy@pagecounter=\count197
+\@linkdim=\dimen152
+\Hy@linkcounter=\count274
+\Hy@pagecounter=\count275
 
 (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2023-10-21 v7.01c Hyperref: PDFDocEncoding definition (HO)
@@ -168,7 +244,7 @@ Now handling font encoding PD1 ...
 y
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count198
+\Hy@SavedSpaceFactor=\count276
 
 (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2023-10-21 v7.01c Hyperref: PDF Unicode definition (HO)
@@ -182,14 +258,14 @@ Package hyperref Info: Plain pages OFF on input line 4183.
 Package hyperref Info: Backreferencing OFF on input line 4188.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4435.
-\c@Hy@tempcnt=\count199
+\c@Hy@tempcnt=\count277
 
 (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
-\Urlmuskip=\muskip16
+\Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4773.
-\XeTeXLinkMargin=\dimen144
+\XeTeXLinkMargin=\dimen153
 
 (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -199,9 +275,9 @@ alc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count266
-\Field@Width=\dimen145
-\Fld@charsize=\dimen146
+\Fld@menulength=\count278
+\Field@Width=\dimen154
+\Fld@charsize=\dimen155
 Package hyperref Info: Hyper figures OFF on input line 6052.
 Package hyperref Info: Link nesting OFF on input line 6057.
 Package hyperref Info: Hyper index ON on input line 6060.
@@ -215,9 +291,9 @@ y
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count267
-\c@Item=\count268
-\c@Hfootnote=\count269
+\Hy@abspage=\count279
+\c@Item=\count280
+\c@Hfootnote=\count281
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -230,8 +306,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count270
-\c@bookmark@seq@number=\count271
+\Fld@listcount=\count282
+\c@bookmark@seq@number=\count283
 
 (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerun
 filecheck.sty
@@ -244,7 +320,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
-\Hy@SectionHShift=\skip50
+\Hy@SectionHShift=\skip53
 )
 (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -252,88 +328,440 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.st
 y
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks18
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
-Package: amsmath 2023/05/13 v2.17o AMS math features
-\@mathmargin=\skip51
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.s
+ty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 
-For additional information on amsmath, use the `?' option.
-(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
-Package: amstext 2021/08/26 v2.01 AMS text
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
-(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks19
-\ex@=\dimen147
-)) (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.st
-y
-Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen148
-) (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
-Package: amsopn 2022/04/08 v2.04 operator names
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen156
+\captionmargin=\dimen157
+\caption@leftmargin=\dimen158
+\caption@rightmargin=\dimen159
+\caption@width=\dimen160
+\caption@indent=\dimen161
+\caption@parindent=\dimen162
+\caption@hangindent=\dimen163
+Package caption Info: Standard document class detected.
 )
-\inf@bad=\count272
-LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count273
-\leftroot@=\count274
-LaTeX Info: Redefining \overline on input line 399.
-LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count275
-\DOTSCASE@=\count276
-LaTeX Info: Redefining \ldots on input line 496.
-LaTeX Info: Redefining \dots on input line 499.
-LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box51
-\strutbox@=\box52
-LaTeX Info: Redefining \big on input line 722.
-LaTeX Info: Redefining \Big on input line 723.
-LaTeX Info: Redefining \bigg on input line 724.
-LaTeX Info: Redefining \Bigg on input line 725.
-\big@size=\dimen149
-LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count277
-LaTeX Info: Redefining \bmod on input line 905.
-LaTeX Info: Redefining \pmod on input line 910.
-LaTeX Info: Redefining \smash on input line 940.
-LaTeX Info: Redefining \relbar on input line 970.
-LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count278
-\dotsspace@=\muskip17
-\c@parentequation=\count279
-\dspbrk@lvl=\count280
-\tag@help=\toks20
-\row@=\count281
-\column@=\count282
-\maxfields@=\count283
-\andhelp@=\toks21
-\eqnshift@=\dimen150
-\alignsep@=\dimen151
-\tagshift@=\dimen152
-\tagwidth@=\dimen153
-\totwidth@=\dimen154
-\lineht@=\dimen155
-\@envbody=\toks22
-\multlinegap=\skip52
-\multlinetaggap=\skip53
-\mathdisplay@stack=\toks23
-LaTeX Info: Redefining \[ on input line 2953.
-LaTeX Info: Redefining \] on input line 2954.
+\c@caption@flags=\count284
+\c@continuedfloat=\count285
+Package caption Info: hyperref package is loaded.
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count286
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count287
 ) (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count284
-\float@exts=\toks24
+\c@float@type=\count288
+\float@exts=\toks23
 \float@box=\box53
-\@float@everytoks=\toks25
+\@float@everytoks=\toks24
 \@floatcapt=\box54
 )
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 26
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/todonotes\todonotes.
+sty
+Package: todonotes 2024/01/05 v1.1.7 Todonotes source and documentation.
+Package: todonotes 2024/01/05
+ (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.st
+y
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.te
+x
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.t
+ex
+\XKV@toks=\toks25
+\XKV@tempa@toks=\toks26
+)
+\XKV@depth=\count289
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.c
+fg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.l
+tx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\ti
+kz.sty
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.s
+ty
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs
+.sty
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfu
+til-common.tex
+\pgfutil@everybye=\toks27
+\pgfutil@tempdima=\dimen164
+\pgfutil@tempdimb=\dimen165
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfu
+til-latex.def
+\pgfutil@abb=\box55
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfr
+cs.code.tex
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.t
+ex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfco
+re.sty
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfs
+ys.sty
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pg
+fsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfk
+eys.code.tex
+\pgfkeys@pathtoks=\toks28
+\pgfkeys@temptoks=\toks29
+
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfk
+eyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks30
+))
+\pgf@x=\dimen166
+\pgf@y=\dimen167
+\pgf@xa=\dimen168
+\pgf@ya=\dimen169
+\pgf@xb=\dimen170
+\pgf@yb=\dimen171
+\pgf@xc=\dimen172
+\pgf@yc=\dimen173
+\pgf@xd=\dimen174
+\pgf@yd=\dimen175
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count290
+\c@pgf@countb=\count291
+\c@pgf@countc=\count292
+\c@pgf@countd=\count293
+\t@pgf@toka=\toks31
+\t@pgf@tokb=\toks32
+\t@pgf@tokc=\toks33
+\pgf@sys@id@count=\count294
+
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pg
+f.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pg
+fsys-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pg
+fsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pg
+fsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count295
+\pgfsyssoftpath@bigbuffer@items=\count296
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pg
+fsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
+core.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.c
+ode.tex
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathut
+il.code.tex)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathpa
+rser.code.tex
+\pgfmath@dimen=\dimen176
+\pgfmath@count=\count297
+\pgfmath@box=\box56
+\pgfmath@toks=\toks34
+\pgfmath@stack@operand=\toks35
+\pgfmath@stack@operation=\toks36
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfu
+nctions.code.tex)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfu
+nctions.basic.code.tex)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfu
+nctions.trigonometric.code.tex)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfu
+nctions.random.code.tex)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfu
+nctions.comparison.code.tex)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfu
+nctions.base.code.tex)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfu
+nctions.round.code.tex)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfu
+nctions.misc.code.tex)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfu
+nctions.integerarithmetics.code.tex)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathca
+lc.code.tex)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfl
+oat.code.tex
+\c@pgfmathroundto@lastzeros=\count298
+))
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.co
+de.tex)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
+corepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen177
+\pgf@picmaxx=\dimen178
+\pgf@picminy=\dimen179
+\pgf@picmaxy=\dimen180
+\pgf@pathminx=\dimen181
+\pgf@pathmaxx=\dimen182
+\pgf@pathminy=\dimen183
+\pgf@pathmaxy=\dimen184
+\pgf@xx=\dimen185
+\pgf@xy=\dimen186
+\pgf@yx=\dimen187
+\pgf@yy=\dimen188
+\pgf@zx=\dimen189
+\pgf@zy=\dimen190
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
+corepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen191
+\pgf@path@lasty=\dimen192
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
+corepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen193
+\pgf@shorten@start@additional=\dimen194
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
+corescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box57
+\pgf@hbox=\box58
+\pgf@layerbox@main=\box59
+\pgf@picture@serial@count=\count299
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
+coregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen195
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
+coretransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen196
+\pgf@pt@y=\dimen197
+\pgf@pt@temp=\dimen198
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
+corequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
+coreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
+corepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
+corearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen199
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
+coreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen256
+\pgf@sys@shading@range@num=\count300
+\pgf@shadingcount=\count301
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
+coreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
+coreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box60
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
+corelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
+coretransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
+corepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
+corerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmod
+uleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box61
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmod
+uleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pg
+fcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen257
+\pgf@nodesepend=\dimen258
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pg
+fcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor
+.sty
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkey
+s.sty
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfk
+eys.code.tex))
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.c
+ode.tex))
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgff
+or.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen259
+\pgffor@skip=\dimen260
+\pgffor@stack=\toks37
+\pgffor@toks=\toks38
+))
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/
+tikz\tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgfl
+ibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count302
+\pgfplotmarksize=\dimen261
+)
+\tikz@lastx=\dimen262
+\tikz@lasty=\dimen263
+\tikz@lastxsaved=\dimen264
+\tikz@lastysaved=\dimen265
+\tikz@lastmovetox=\dimen266
+\tikz@lastmovetoy=\dimen267
+\tikzleveldistance=\dimen268
+\tikzsiblingdistance=\dimen269
+\tikz@figbox=\box62
+\tikz@figbox@bg=\box63
+\tikz@tempbox=\box64
+\tikz@tempbox@bg=\box65
+\tikztreelevel=\count303
+\tikznumberofchildren=\count304
+\tikznumberofcurrentchild=\count305
+\tikz@fig@count=\count306
+
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmod
+ulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count307
+\pgfmatrixcurrentcolumn=\count308
+\pgf@matrix@numberofcolumns=\count309
+)
+\tikz@expandcount=\count310
+
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/
+tikz/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/
+tikz/libraries\tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count311
+\calc@Bcount=\count312
+\calc@Adimen=\dimen270
+\calc@Bdimen=\dimen271
+\calc@Askip=\skip54
+\calc@Bskip=\skip55
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count313
+\calc@Cskip=\skip56
+)
+\c@@todonotes@numberoftodonotes=\count314
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2023/10/25 v3.96 The Babel package
+\babel@savecnt=\count315
+\U@D=\dimen272
+\l@unhyphenated=\language79
+
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def
+)
+\bbl@readstream=\read3
+\bbl@dirlevel=\count316
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/babel-croatian\croat
+ian.ldf
+Language: croatian 2014/03/31 v1.3m Croatian support from the babel system
+))
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/hr\ba
+bel-croatian.tex
+Package babel Info: Importing font and identification data for croatian
+(babel)             from babel-hr.ini. Reported on input line 11.
+)
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 37
 .
 
 (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
@@ -342,194 +770,313 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-
 pdftex.def
 File: l3backend-pdftex.def 2023-10-23 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count285
-\l__pdf_internal_box=\box55
+\l__color_backend_stack_int=\count317
+\l__pdf_internal_box=\box66
 ) (primjer_izvjestaja.aux)
 \openout1 = `primjer_izvjestaja.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
 
 (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf
 .mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count286
-\scratchdimen=\dimen156
-\scratchbox=\box56
-\nofMPsegments=\count287
-\nofMParguments=\count288
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count289
-\MPscratchDim=\dimen157
-\MPnumerator=\count290
-\makeMPintoPDFobject=\count291
-\everyMPtoPDFconversion=\toks27
+\scratchcounter=\count318
+\scratchdimen=\dimen273
+\scratchbox=\box67
+\nofMPsegments=\count319
+\nofMParguments=\count320
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count321
+\MPscratchDim=\dimen274
+\MPnumerator=\count322
+\makeMPintoPDFobject=\count323
+\everyMPtoPDFconversion=\toks40
 )
 (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopd
 f-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+(C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
 
 (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sy
 s.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 26.
+Package hyperref Info: Link coloring OFF on input line 37.
  (primjer_izvjestaja.out) (primjer_izvjestaja.out)
-\@outlinefile=\write3
-\openout3 = `primjer_izvjestaja.out'.
+\@outlinefile=\write4
+\openout4 = `primjer_izvjestaja.out'.
 
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3
-3.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
 
+
+Package todonotes Warning: The length marginparwidth is less than 2cm and will 
+most likely cause issues with the appearance of inserted todonotes. The issue c
+an be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to 
+loading the todonotes package. on input line 37.
+
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4
+4.
 (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
-3.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
+4.
 
 (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-33.
+44.
 
 (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-33.
+44.
 
 (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 33.
+(Font)              <12> on input line 44.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 33.
+(Font)              <8> on input line 44.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 33.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
+(Font)              <6> on input line 44.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
 
 
 (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 33.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
 
 
 (C:\Users\Korisnik\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 1552) in paragraph at lines 49--58
-\T1/lmr/m/n/10 ju¢i teo-retske os-nove i prim-jene. U svakom
+Overfull \hbox (40.24673pt too wide) in paragraph at lines 44--44
+ [][] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--61
-[]\T1/lmr/bx/n/14.4 Pregled im-ple-mentacija
- []
-
-
-Underfull \hbox (badness 3657) in paragraph at lines 61--61
-\T1/lmr/bx/n/14.4 metoda za obradu slika
- []
-
-
-Underfull \hbox (badness 2426) in paragraph at lines 61--61
-\T1/lmr/bx/n/14.4 po-mo¢u NVIDIA CUDA
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 73--73
-[]\T1/lmr/bx/n/12 Implementacija al-go-ritma
- []
-
-
-Underfull \hbox (badness 1769) in paragraph at lines 73--73
-\T1/lmr/bx/n/12 grupi-ranje s K sred-njih vri-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--77
-[]\T1/lmr/bx/n/12 Implementacija neu-ronske
- []
-
-
-Underfull \hbox (badness 2057) in paragraph at lines 77--77
-\T1/lmr/bx/n/12 mreºe za klasi-fikaciju rukom
- []
-
-
-Underfull \hbox (badness 2495) in paragraph at lines 79--84
-\T1/lmr/m/n/10 Model u ulaznom sloju ima 16,384 neu-rona.
- []
-
-
-Underfull \vbox (badness 1033) has occurred while \output is active []
-
- [1{C:/Users/Korisnik/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/User
-s/Korisnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}
+<slike/CPU-vs-GPU.jpg, id=59, 803.0pt x 534.99875pt>
+File: slike/CPU-vs-GPU.jpg Graphic file (type jpg)
+<use slike/CPU-vs-GPU.jpg>
+Package pdftex.def Info: slike/CPU-vs-GPU.jpg  used on input line 66.
+(pdftex.def)             Requested size: 198.89865pt x 132.51668pt.
+[1{C:/Users/Korisnik/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users
+/Korisnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}
 
 
 ]
-<slike/cnn_training_time_comparison.png, id=50, 508.7808pt x 339.669pt>
-File: slike/cnn_training_time_comparison.png Graphic file (type png)
-<use slike/cnn_training_time_comparison.png>
-Package pdftex.def Info: slike/cnn_training_time_comparison.png  used on input 
-line 87.
-(pdftex.def)             Requested size: 198.89865pt x 132.78653pt.
+<slike/data_to_gpu.png, id=74, 611.4042pt x 395.3169pt>
+File: slike/data_to_gpu.png Graphic file (type png)
+<use slike/data_to_gpu.png>
+Package pdftex.def Info: slike/data_to_gpu.png  used on input line 79.
+(pdftex.def)             Requested size: 198.89865pt x 128.60313pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.131 \end{document}
-                     <./slike/cnn_training_time_comparison.png>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
+[]\T1/lmr/bx/n/14.4 Pregled im-ple-men-ta-cija
+ []
+
+
+Underfull \hbox (badness 3657) in paragraph at lines 84--84
+\T1/lmr/bx/n/14.4 me-toda za obradu slika
+ []
+
+
+Underfull \hbox (badness 2426) in paragraph at lines 84--84
+\T1/lmr/bx/n/14.4 po-mo¢u NVI-DIA CUDA
+ []
+
+<slike/cpu_mat_mul.png, id=77, 602.0091pt x 395.3169pt>
+File: slike/cpu_mat_mul.png Graphic file (type png)
+<use slike/cpu_mat_mul.png>
+Package pdftex.def Info: slike/cpu_mat_mul.png  used on input line 94.
+(pdftex.def)             Requested size: 203.39862pt x 133.56148pt.
+<slike/gpu_mat_mul.png, id=78, 630.1944pt x 395.3169pt>
+File: slike/gpu_mat_mul.png Graphic file (type png)
+<use slike/gpu_mat_mul.png>
+Package pdftex.def Info: slike/gpu_mat_mul.png  used on input line 100.
+(pdftex.def)             Requested size: 203.39862pt x 127.58975pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2 <./slike/CPU-vs-GPU.jpg> <./slike/data_to_gpu.png>]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 111.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 111.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 111.
+<slike/img_tranformation_results.png, id=90, 502.2765pt x 250.7769pt>
+File: slike/img_tranformation_results.png Graphic file (type png)
+<use slike/img_tranformation_results.png>
+Package pdftex.def Info: slike/img_tranformation_results.png  used on input lin
+e 135.
+(pdftex.def)             Requested size: 198.89865pt x 99.30641pt.
+<slike/image_tranformatoin_timming_graph.png, id=91, 499.3857pt x 339.669pt>
+File: slike/image_tranformatoin_timming_graph.png Graphic file (type png)
+<use slike/image_tranformatoin_timming_graph.png>
+Package pdftex.def Info: slike/image_tranformatoin_timming_graph.png  used on i
+nput line 142.
+(pdftex.def)             Requested size: 198.89865pt x 135.2847pt.
+<slike/sobel_comparison.png, id=93, 505.89pt x 339.669pt>
+File: slike/sobel_comparison.png Graphic file (type png)
+<use slike/sobel_comparison.png>
+Package pdftex.def Info: slike/sobel_comparison.png  used on input line 168.
+(pdftex.def)             Requested size: 198.89865pt x 133.54842pt.
+ [3{C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathe
+x.enc}{C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ma
+thit.enc}{C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm
+-rm.enc}{C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-
+mathsy.enc} <./slike/cpu_mat_mul.png> <./slike/gpu_mat_mul.png> <./slike/img_tr
+anformation_results.png> <./slike/image_tranformatoin_timming_graph.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
+[]\T1/lmr/bx/n/12 Detekcija ru-bova ko-ris-te¢i
+ []
+
+<slike/canny_original.png, id=116, 320.1561pt x 302.0886pt>
+File: slike/canny_original.png Graphic file (type png)
+<use slike/canny_original.png>
+Package pdftex.def Info: slike/canny_original.png  used on input line 187.
+(pdftex.def)             Requested size: 198.89865pt x 187.68018pt.
+
+Underfull \vbox (badness 3735) has occurred while \output is active []
+
+<slike/canny_np.png, id=117, 291.9708pt x 292.6935pt>
+File: slike/canny_np.png Graphic file (type png)
+<use slike/canny_np.png>
+Package pdftex.def Info: slike/canny_np.png  used on input line 195.
+(pdftex.def)             Requested size: 108.29121pt x 108.5584pt.
+<slike/canny_cp.png, id=118, 291.9708pt x 292.6935pt>
+File: slike/canny_cp.png Graphic file (type png)
+<use slike/canny_cp.png>
+Package pdftex.def Info: slike/canny_cp.png  used on input line 200.
+(pdftex.def)             Requested size: 108.29121pt x 108.5584pt.
+<slike/canny_timing.png, id=122, 409.53pt x 328.97906pt>
+File: slike/canny_timing.png Graphic file (type png)
+<use slike/canny_timing.png>
+Package pdftex.def Info: slike/canny_timing.png  used on input line 212.
+(pdftex.def)             Requested size: 221.0pt x 177.5356pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./slike/sobel_comparison.png> <./slike/canny_original.png> <./slike/canny_
+np.png> <./slike/canny_cp.png>]
+<slike/k_means_original.png, id=134, 320.1561pt x 302.0886pt>
+File: slike/k_means_original.png Graphic file (type png)
+<use slike/k_means_original.png>
+Package pdftex.def Info: slike/k_means_original.png  used on input line 230.
+(pdftex.def)             Requested size: 221.0pt x 208.53354pt.
+<slike/k_means_cpu.png, id=135, 320.1561pt x 302.0886pt>
+File: slike/k_means_cpu.png Graphic file (type png)
+<use slike/k_means_cpu.png>
+Package pdftex.def Info: slike/k_means_cpu.png  used on input line 238.
+(pdftex.def)             Requested size: 108.29121pt x 102.17867pt.
+<slike/k_means_gpu.png, id=136, 320.1561pt x 302.0886pt>
+File: slike/k_means_gpu.png Graphic file (type png)
+<use slike/k_means_gpu.png>
+Package pdftex.def Info: slike/k_means_gpu.png  used on input line 243.
+(pdftex.def)             Requested size: 108.29121pt x 102.17867pt.
+<slike/k_means_timing.png, id=141, 406.1574pt x 328.8285pt>
+File: slike/k_means_timing.png Graphic file (type png)
+<use slike/k_means_timing.png>
+Package pdftex.def Info: slike/k_means_timing.png  used on input line 255.
+(pdftex.def)             Requested size: 221.0pt x 178.91946pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5 <./slike/canny_timing.png> <./slike/k_means_original.png> <./slike/k_means_
+cpu.png> <./slike/k_means_gpu.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
+[]\T1/lmr/bx/n/12 Implementacija ne-uron-ske
+ []
+
+
+Underfull \hbox (badness 2057) in paragraph at lines 260--260
+\T1/lmr/bx/n/12 mreºe za kla-si-fi-ka-ciju ru-kom
+ []
+
+<slike/cnn_training_time_comparison.png, id=156, 508.7808pt x 339.669pt>
+File: slike/cnn_training_time_comparison.png Graphic file (type png)
+<use slike/cnn_training_time_comparison.png>
+Package pdftex.def Info: slike/cnn_training_time_comparison.png  used on input 
+line 270.
+(pdftex.def)             Requested size: 198.89865pt x 132.78653pt.
+<slike/ostale_metode_usporedba.jpg, id=158, 540.51938pt x 493.0922pt>
+File: slike/ostale_metode_usporedba.jpg Graphic file (type jpg)
+<use slike/ostale_metode_usporedba.jpg>
+Package pdftex.def Info: slike/ostale_metode_usporedba.jpg  used on input line 
+281.
+(pdftex.def)             Requested size: 132.60135pt x 120.96288pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <./slike/k_means_timing.png> <./slike/cnn_training_time_comparison.png>]
+(primjer_izvjestaja.bbl) [7 <./slike/ostale_metode_usporedba.jpg>]
 (primjer_izvjestaja.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-23>
  ***********
 Package rerunfilecheck Info: File `primjer_izvjestaja.out' has not changed.
-(rerunfilecheck)             Checksum: B5A45AE934DC688EB7ECBF05EB63C56F;2803.
+(rerunfilecheck)             Checksum: FF3C37CB7C3915C6F392A1A9FD4D26EB;3526.
  ) 
 Here is how much of TeX's memory you used:
- 9999 strings out of 474717
- 154081 string characters out of 5747020
- 1941036 words of memory out of 5000000
- 31901 multiletter control sequences out of 15000+600000
- 589091 words of font info for 59 fonts, out of 8000000 for 9000
+ 23839 strings out of 474717
+ 448577 string characters out of 5747020
+ 1942036 words of memory out of 5000000
+ 45427 multiletter control sequences out of 15000+600000
+ 614355 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,8n,79p,777b,443s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,8n,101p,968b,639s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12
-.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr
-10.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
-mr12.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
-/lmr17.pfb>
-Output written on primjer_izvjestaja.pdf (2 pages, 148839 bytes).
+.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lme
+x10.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
+lmmi10.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmmi7.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/lm/lmr10.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/lm/lmr12.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/lm/lmr17.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/lm/lmr9.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/lm/lmri10.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/lm/lmsy10.pfb><C:/Users/Korisnik/AppData/Local/Programs/MiKTeX/font
+s/type1/public/lm/lmsy7.pfb>
+Output written on primjer_izvjestaja.pdf (7 pages, 1608706 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 19 named destinations out of 1000 (max. 500000)
- 78 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 238 PDF objects out of 1000 (max. 8388607)
+ 39 named destinations out of 1000 (max. 500000)
+ 202 words of extra memory for PDF output out of 10000 (max. 10000000)
 

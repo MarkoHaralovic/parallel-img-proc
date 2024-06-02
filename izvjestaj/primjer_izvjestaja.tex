@@ -2,6 +2,8 @@
 
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
+ \usepackage{amsmath}
+ \RequirePackage[nottoc]{tocbibind}
 
 % Paket za hrvatski jezik neispravno izostavlja toèke iza naslova,
 % to ispravljamo zadavanjem novih funkcija za numeriranje koje stavljaju
@@ -20,63 +22,244 @@
 \RequirePackage{hyperref}
 \RequirePackage{amssymb}
 \RequirePackage{amsmath}
+\usepackage{subcaption}
 \usepackage{float}
+\usepackage{todonotes}
+
+\bibliographystyle{plain}
+
+\usepackage[croatian]{babel}
+
+
+
 
 % Ovdje zapoèinje èlanak.
 \begin{document}
 	
 	% Navedite naslov i autore. Datume se automatski postavlja na datum kreiranja dokumenta,
-	% no moe se promijeniti zadavanjem \date{30. veljaèe, 2004.}
+	% no može se promijeniti zadavanjem \date{30. veljaèe, 2004.}
 	\title{Paralelna realizacija metoda za obradu slike pomoću NVIDIA CUDA tehnologije} 
-	\author{Anabel Dautović, Ita ?, Lana ?, Valeria ?, Marko Haralović, Dino Babić}
+	\author{Marko Haralović, Ita Poklepović, Lana Barić, Dino Babić,  Anabel Dautović, Valeria Javornik}
 	\maketitle
-	
-	% Svako poglavlje zapoèinje sa \section{Ime poglavlja} ako elimo da bude numerirano,
-	% a sa \section*{Ime poglavlja} ako ne elimo da bude numerirano.
+
 	
 	\section*{Sažetak}
-	Sažetak od stotinjak riječi spominje najvažnije
-	teme koje su obrađene u daljnjem tekstu. Tu bi vjerojatno ukratko trebalo napisati o 
-	implementacijama koje smo napravili	
-	
+	U ovom radu analizirana je razlika u performansi između centralnih procesorskih jedinica (CPU) i grafičkih procesorskih jedinica (GPU) prilikom izvršavanja nekih od odabranih metoda obrade slika koristeći CUDA tehnologiju.  Ukratko će biti opisana teoretska razlika između funkcionalnosti CPU i GPU, a onda objašnjena i prikazana implementacija odabranih metoda za koju su korištene Numpy, Cupy i scikit-image open-source python biblioteke. Korištene metode odabrane su zbog svoje važnosti u području obrade digitalnih slika, a uključuju matrično množenje, detekciju rubova pomoću Sobel i Canny operatora, grupiranje s K srednjim vrijednostima, treniranje neuronske mreže za klasifikaciju rukom pisanih znamenaka, te ostale metode koje će kasnije biti predstavljene. Eksperimenti pokazuju da razlike u kvaliteti rezultata između CPU i GPU nema, ali u brzini izvođenja metoda, GPU je i do 10 puta veći.
+ 
 	
 	\section{Uvod}
-	Uvod sadrži kratki opis područja, zašto je ono
-	važno i koje su primjene. Mislim da bi tu trebalo pisati o području obrade slike, zašto je važno i koje su njegove primjene.
 	
+    Područje obrade slika obuhvaća mnoge tehnike i metode za manipulaciju i analizu slika, koje se koriste za različite primjene u gotovo svim disciplinama. U ovom radu, fokus je na obradi informacija gdje je ulazni signal digitalna slika prikazana kao dvodimenzionalna matrica s jednim kanalom (slika bez boje - siva vrijednost) ili s tri kanala (slika u boji - RGB kanali). \newline
+    Obrada slika je izuzetno važna zbog svoje široke primjene u mnogim područjima. Na primjer, koristi se za olakšavanje medicinske dijagnostike, industrijske automatizacije, forenzike, autonomnih vozila, poljoprivrede, geografije, građevine i mnogih drugih disciplina. Široka primjenjivost ovog područja zahtjeva da korištene metode budu ne samo točne, već i efikasne u pogledu korištenja resursa. U računarstvu, cilj je često da se metode izvode što brže, ali pritom treba uzeti u obzir i trošak bržeg izvođenja, posebno kada se ubrzanje postiže unapređenjem fizičke arhitekture računala.
+    
 	
-	\section{Opis područja i aktivnosti u svijetu}
-	Opis područja je dataljniji prikaz područja uljučujući
-	teoretske osnove i primjene.
-	U svakom tehničkom izvještaju ili članku uobičajeno
-	je uz svako navođenje rezultata istraživanja i
-	primjena razmatranih metoda navesti i poznate istraživačke
-	grupe ili laboratoriji u svijetu, odnosno
-	referencirati se na objavljene radove, npr. piramidalne
-	sheme za brzo bogaćenje pokazale su se iznimno
-	uspješne.
-	
-	Mislim da bi ovdje trebalo pisati o razvoju grafičkih kartica i njihovoj primjeni u produčju obrade slike, koje su razlike i prednosti u odnosu na CPU. Možda malo predstaviti i NVIDIU kao kompaniju, zašto se ona istakla i navesti neke druge prizvođače grafičkih kartica i zašto oni nisu toliko popularni kada je u pitanju primjena grafičkih kartica u računarske svrhe. Također, možda i detaljnije opisati kako uopće rade grafičke kartice.
-	
+	\section{GPU, CPU i aktivnost u svijetu}
+
+        Grafički procesori (GPU) prvo su se počeli koristiti za poboljšanje performansi videoigara. Već 1970-ih godina, u arkadne igre su se ugrađivali posebni čipovi čiji je zadatak bio prikazivanje videoigre na ekranu. Međutim, trebalo je dugo vremena da se GPU-ovi počnu šire koristiti za ubrzavanje drugih procesa.
+        
+        CPU (centralna procesorska jedinica) i GPU općenito se razlikuju u svojoj arhitekturi i primjeni. CPU se sastoji od manjeg broja jezgri (najčešće od 2 do 16), što ograničava njegovu sposobnost za istovremeno izvršavanje zadataka. Kada se zadaci paraleliziraju na CPU-u, koriste se njegove jezgre, no zbog malog broja jezgri, samo se nekoliko zadataka može izvršavati istovremeno. Često se koristi prividna paralelizacija gdje se više zadataka brzo prebacuje s jedne jezgre na drugu. Ovakva paralelizacija nije najefikasnija jer je promjena konteksta dretvi vremenski neučinkovita.
+        
+        S druge strane, GPU se sastoji od velikog broja jezgri, koje u boljim grafičkim karticama mogu brojati desetke tisuća. Ovo ga čini idealnim za paralelno izvođenje velikog broja jednostavnih operacija. Na slici \ref{fig:cpu_vs_gpu} može se vidjeti razlika u arhitekturi dviju procesorskih jedinica.
+        
+        \begin{figure}[H]
+        	\centering
+        	\includegraphics[width=0.9\linewidth]{slike/CPU-vs-GPU.jpg}
+        	\caption{Pojednostavljeni prikaz CPU (lijevo) i GPU (desno) \cite{Canny}}
+        	\label{fig:cpu_vs_gpu}
+        \end{figure}
+        
+        Trenutno je NVIDIA vodeća tvrtka u razvoju GPU tehnologije. Osnovana je 1993. godine, a svoju popularnost stekla je lansiranjem prvog grafičkog procesora, nazvanog GeForce. CUDA je također tehnologija koju je razvila NVIDIA, a omogućuje programerima da pišu kod i pritom koriste funkcije koje će se izvršavati paralelno, na grafičkom procesoru.
+        
+        \section{Prijenos podataka između CPU i GPU}
+        
+        Prijenos podataka s CPU na GPU je vremenski zahtjevan. Da bi korištenje GPU-a doista bilo isplativo, potrebno je baratati s velikom količinom podataka. Ako je podataka malo, tada će CPU obaviti istu operaciju brže nego li GPU, upravo zbog prijenosa podataka na GPU. Na slici \ref{fig:data_to_gpu} prikazana su vremena prijenosa matrica na GPU. Najmanja matrica je veličine 100x100, a najveća veličine 20000x20000. 
+        
+        \begin{figure}[H]
+        	\centering
+        	\includegraphics[width=0.9\linewidth]{slike/data_to_gpu.png}
+        	\caption{Prikaz vremena prijenosa matrica različitih veličina na GPU.}
+        	\label{fig:data_to_gpu}
+        \end{figure}
+        
 	\section{Pregled implementacija metoda za obradu slika pomoću NVIDIA CUDA tehnologije}
-	Ovdje bi za svaku metdou opisao što ona radi, dakle što na primjer radi Canny edge detector i kako to radi, usporedio vremensku razliku između naše implemnentacije na cpu i gpu, ali i ako opencv ima implementaciju tog algoritma onda bih dodao i njega u vremensku usporedbu. Također, treba provjeriti da naša implementacija radi jednako dobro, znači samo provućemo istu sliku kroz našu i opencv implementaciju i prikažemo da su rezultati jednaki ili da se vrlo malo razlikuju. 
 	
+	\subsection{Usporedba matričnog množenja na CPU i GPU te primjena nad transformacijama slike}
 	
-	\subsection{Usporedba maričnog množenja na CPU i GPU te primjena nad transformacijama slike}
+		Matrično množenje vrlo je često korištena operacija te je nužno osigurati njezino učinkovito izvođenje čak i u slučaju vrlo velikih matrica. Razmotrimo sljedeći primjer. Kreirane su kvadratne matrice veličina od 150x150 do 1500x1500. Svaka matrica pomnožena je sama sa sobom te je vrijeme obavljanja te operacije zabilježeno. Na slici \ref{fig:cpu_gpu_comparison} prikazana su vremena izvođenja u slučaju korištenja CPU-a i u slučaju korištenja GPU-a. Na slici možemo uočiti da je izvođenje značajno brže na GPU, čak i za relativno male veličine matrica.
+		
+		\begin{figure}[H]
+			\centering
+			\begin{subfigure}{0.45\textwidth}
+				\centering
+				\includegraphics[width=\linewidth]{slike/cpu_mat_mul.png}
+				\caption{Vrijeme izvođenja na CPU.}
+			\end{subfigure}
+			\hfill
+			\begin{subfigure}{0.45\textwidth}
+				\centering
+				\includegraphics[width=\linewidth]{slike/gpu_mat_mul.png}
+				\caption{Vrijeme izvođenja na GPU.}
+			\end{subfigure}
+			\caption{Usporedba vremena množenja matrica na CPU i GPU.}
+			\label{fig:cpu_gpu_comparison}
+		\end{figure}
+
+        \subsection{Linearna geometrijska transformacija}
+
+        Linearne geometrijske transformacije slika ukljućuju translaciju, skaliranje i rotaciju. Prikazana matrica transformacije rotacije (\ref{eq:rotation}) određuje koja je nova pozicija jednog pixela slike. Ova je metoda savršen primjer za paralelizaciju jer je račun nove pozicije svakog pixela u potpunosti neovisan o ostalima pa se teoretski mogu svi računati u isto vrijeme. Naravno to neće uvjek biti moguće zbog ograničenog broja jezgri GPU-a.
+        
+               \begin{equation}
+                    \begin{bmatrix}
+                    x \\
+                    y \\
+                    1
+                    \end{bmatrix}
+                    =
+                    \begin{bmatrix}
+                    \cos \theta & -\sin \theta & 0 \\
+                    \sin \theta & \cos \theta & 0 \\
+                    0 & 0 & 1
+                    \end{bmatrix}
+                    \begin{bmatrix}
+                    u \\
+                    v \\
+                    1
+                    \end{bmatrix}
+                    \label{eq:rotation}
+                \end{equation}
+
+        Na slici \ref{fig:rotation_results} je vidljivo da paralelizaciju pomoću GPU-a nikako ne utječe na ispravnost transformacije, ali zato kao što je vidljivo iz grafa \ref{fig:tranformatoin_timming} znatno utječe na brzinu jer se koristeći CPU pozicija svakog piksela treba slijedno računati. Korištena slika je veličine 1024 x 1024 i rotirana je za 45$^\circ$.
+
+        \begin{figure}[H]
+		\centering
+		\includegraphics[width=0.9\linewidth]{slike/img_tranformation_results.png} 
+		\caption{Rezultati rotacije računate na CPU i GPU}
+		\label{fig:rotation_results}
+	\end{figure} 
+
+        \begin{figure}[H]
+		\centering
+		\includegraphics[width=0.9\linewidth]{slike/image_tranformatoin_timming_graph.png} 
+		\caption{Razlika u vremenu izvođenja transformacije rotacije na CPU (3.738 s) i GPU (0.005 s)}
+		\label{fig:tranformatoin_timming}
+	\end{figure} 
+
+        \subsection{Sobel operator za detekciju rubova}
+        Sobel operator jedan je od poznatijih algoritama za detekciju rubova u slikama. Za aproksimaciju prve derivacije intenziteta slike koristi dvije matrice veličine 3x3.
+        \[
+        G_x = \begin{bmatrix}
+        	-1 & 0 & +1 \\
+        	-2 & 0 & +2 \\
+        	-1 & 0 & +1 
+        \end{bmatrix}
+        \quad \text{i} \quad
+        G_y = \begin{bmatrix}
+        	-1 & -2 & -1 \\
+        	0 & 0 & 0 \\
+        	+1 & +2 & +1 
+        \end{bmatrix}
+        \]
+        
+        Izradili smo dvije implementacije Sobel operatora, jednu koristeću biblioteku NumPy i drugu koristeći biblioteku CuPy koja omogućava izvođenje na GPU.
+        Na slici \ref{fig:sobel_comparison} prikazana je usporedba vremena izvoženja Sobel implementacije koja se izvodi na GPU i one koja se izvodi na CPU.
+        
+        \begin{figure}[H]
+        	\centering
+        	\includegraphics[width=0.9\linewidth]{slike/sobel_comparison.png} 
+        	\caption{Implementacija Sobel operatora koja se izvodi na GPU značajno je brža od one koja se izvodi na CPU.}
+        	\label{fig:sobel_comparison}
+        \end{figure} 
+        
+        
+        
+	\subsection{Detekcija rubova koristeći Canny detektor}
 	
-	Opis metoda slijedi\dots
+	Iako je Canny detektor rubova John F. Canny predstavio još u 1986. u članku \cite{Canny} on je i dan danas ostao jedan od najpouzdanijih algoritama detekcije rubova u slikama. 
 	
-	\subsection{Implementacija metoda za detekciju rubova u slici}
+	Canny detektor radi u više koraka. Prvi korak je redukcija šuma korištenjem Gaussovog filtra koji blago zamagljuje sliku kako bi se umanjio efekt nasumičnog šuma. Nakon uklanjanja šuma koristi se Sobel operator (objašnjen u prošlom poglavlju) kako bi se izračunao intezitet promjene vrijednosti piksela slike i njen smjer. Ovaj način detekcije rubova vraća dosta neodređene rubove pa u sljedećem koraku Canny detektor njih stanjuje eliminirajući sve piksele koji se ne nalaze na lokalnom maksimumu u pravcu gradijenta što rezultira preciznijim rubovima. Kako bi se dalje izbacili rubovi koji su potencijalno nastali zbog šuma ili varijacije koriste se dva praga: visoki i niski. Dalje se gledaju pikseli rubova. Ako je gradijent piksela manji od niskog praga odbacuje se. Ako je veći od visokog praga označuje se kao jaki rub, dok se ostali pikseli rubova označuju kao slabi rub.
 	
-	Opis metoda slijedi\dots
+	U zadnjem koraku se izbacuju pikseli slabih rubova u slučaju kada se ne mogu povezati s jakim rubom.
 	
-	\subsection{Implementacija algoritma grupiranje s K srednjih vrijednosti za segmentaciju slike}
+	Na slikama ispod mogu se vidjeti originalna slika \ref{fig:canny_original}, dobiveni rezultat Canny detektora na CPU i GPU \ref{fig:canny_CPU_GPU}.
 	
-	Opis metoda slijedi\dots
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.9\linewidth]{slike/canny_original.png} 
+		\caption{Originalna slika dimenzija 1024 x 1024}
+		\label{fig:canny_original}
+	\end{figure} 
+	
+	\begin{figure}[hbt]
+		\centering
+		\begin{subfigure}[]{0.49\linewidth}
+			\includegraphics[width=1\linewidth]{slike/canny_np.png}
+			\caption{CPU (4.807 s)}
+			
+		\end{subfigure}
+		\begin{subfigure}[]{0.49\linewidth}
+			\includegraphics[width=1\linewidth]{slike/canny_cp.png}
+			\caption{GPU (0.028 s)}
+			
+		\end{subfigure}
+		\caption{Rezultati Canny detektora rubova nad slikom \ref{fig:canny_original}}
+		\label{fig:canny_CPU_GPU}
+	\end{figure}
+	
+	Na slici \ref{fig:canny_timing} vidi se razlika između vremena potrebnog za izvođenje funkcije na CPU i GPU ovisno o veličini slike koju procesiramo. Možemo vidjeti da se manje slike do otprilike 500 x 500 veličine zapravo ne isplati prebacivati na GPU, ali zato sa sve većim slikama brzina računanja na CPU raste s veličinom slike dok na GPU jedva primijeti razlika za slike veličine od čak 5000 x 5000.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{slike/canny_timing.png} 
+		\caption{Usporedba CPU i GPU izvedbe Canny detektora u ovisnosti o veličini slike}
+		\label{fig:canny_timing}
+	\end{figure}
+        
+ 
+
+        \subsection{Implementacija algoritma grupiranje s K srednjih vrijednosti za segmentaciju slike}
+        
+        Grupiranje s K srednjih vrijednosti ili K-means grupiranje (engl. K-means clustering) najjednostavniji je i najpoznatiji algoritam grupiranja. Algoritam ima složenost O(KnT), gdje je K broj grupa (engl. cluster), n broj podataka (u slučaju analize slika to je broj piksela), a T broj iteracija algoritma. U kodu je broj iteracija predstavljen varijablom \textit{attempts}.
+        
+        Ovaj postupak pripada segmentaciji grupiranjem (engl. clustering segmentation methods). K predstavlja broj (čvrstih) grupa u koje se pikseli grupiraju na temelju sličnosti. Svaka grupa ima srednju vrijednost (centroid) kojom je predstavljena.
+        
+        Algoritam započinje nasumičnim odabirom K centroida, nakon čega se izračunava udaljenost između svakog piksela i centroida pomoću njihovih HSV vrijednosti. Pikseli se dodjeljuju grupi najbližeg centroida. Zatim izračunava novu srednju vrijednost grupe i tu vrijednost postavlja kao centroid, nakon čega ponovno računa udaljenost svakog piksela do novo izračunatih centroida. Taj se postupak ponavlja sve dok se ne dogodi da ni jedan piksel nije promijenio grupu kojoj pripada nakon izračuna udaljenosti. 
+        Algoritam se ponavlja zadani broj puta T i odabire pokušaj s najuravnoteženijom varijacijom između grupa.
+        
+        \begin{figure}[H]
+        	\centering
+        	\includegraphics[width=1\linewidth]{slike/k_means_original.png} 
+        	\caption{Originalna slika dimenzija 1024 x 1024}
+        	\label{fig:k_means_original}
+        \end{figure} 
+        
+        \begin{figure}[hbt]
+        	\centering
+        	\begin{subfigure}[]{0.49\linewidth}
+        		\includegraphics[width=1\linewidth]{slike/k_means_cpu.png}
+        		\caption{CPU (20.013 s)}
+        		
+        	\end{subfigure}
+        	\begin{subfigure}[]{0.49\linewidth}
+        		\includegraphics[width=1\linewidth]{slike/k_means_gpu.png}
+        		\caption{GPU (0.795 s)}
+        		
+        	\end{subfigure}
+        	\caption{Rezultati K-means grupiranja nad slikom \ref{fig:k_means_original}}
+        	\label{fig:k_means_CPU_GPU}
+        \end{figure}
+        
+        Rezultati grupiranja se vide na slikama \ref{fig:k_means_CPU_GPU}, a vremena provođenja metode u odnosu na veličinu slika se mogu vidjeti na slici \ref{fig:k_means_timing}. Iz rezultata mjerenja vidimo da je k-means grupiranje jako povoljna metoda za paralelizaciju. Različite jezgre GPU-a mogu biti zadužene za izračunavanje udaljenosti između jednog podatka i svih centroida i paralelno se mogu ažurirati centroide.
+        
+        \begin{figure}[H]
+        	\centering
+        	\includegraphics[width=1\linewidth]{slike/k_means_timing.png} 
+        	\caption{Usporedba CPU i GPU izvedbe K-means grupiranja u ovisnosti o veličini slike}
+        	\label{fig:k_means_timing}
+        \end{figure}
 	
 	\subsection{Implementacija neuronske mreže za klasifikaciju rukom pisanih znamenaka}
-	
-	U ovom poglavlju razmotrit ćemo implementaciju neuronske mreže za klasifikaciju rukom pisanih brojeva. Obje implementacije napisane su u programskom jeziku Python. Verzija koja se izvodu na CPU zasniva se na biblioteci NumPy, dok se verzija koja se izvodi na GPU zasniva na biblioteci CuPy. \newline
+
+	U ovom poglavlju razmotrit ćemo implementaciju neuronske mreže za klasifikaciju rukom pisanih brojeva. \cite{neural_networks} Obje implementacije napisane su u programskom jeziku Python. Verzija koja se izvodu na CPU zasniva se na biblioteci NumPy, dok se verzija koja se izvodi na GPU zasniva na biblioteci CuPy. \newline
 	Za treniranje modela korišten je MNIST skup podataka, koji sadrži 60,000 slika rukom pisanih znamenaka. Svaka slika je veličine 28x28 piksela. Prilikom učitavanja skupa podataka, slike su povećane na veličinu 128x128 piksela jer je originalna veličina slika premala da bi se uočile prednosti izvođenja na grafičkim karticama. Naime, treniranje modela s originalnom veličinom slika bilo je sporije na grafičkoj kartici nego na procesoru. Iako se matrične operacije daleko brže izvode na grafičkim karticama, prenošenje podataka na grafičku karticu vremenski je skupo. U slučaju kada imamo malo podataka, vremenski je isplativije izvršiti operacije na procesoru nego prenositi podatke na grafičku karticu i natrag. \newline
 	Model u ulaznom sloju ima 16,384 neurona. Skriveni sloj sadrži 30 neurona, dok izlazni sloj ima 10 neurona jer toliko imamo mogućih klasa. Za treniranje modela koristili smo stohastički gradijentni spust, dok smo kao aktivacijsku funkciju koristili sigmoidnu funkciju.
 	Oba modela trenirali smo 10 epoha te su im točnosti na testnom skupu podataka bile približno jednake. Treniranje modela koji se izvršavao na procesoru je trajalo 1145 sekundi, dok je treniranje modela koji se izvršavao na grafičkoj kartici trajalo 67 sekundi. Grafička usporedba prikazana je na slici \ref{fig:cnn_training_time_comparison}. \newline
@@ -88,44 +271,31 @@
 		\caption{Prikaz usporedbe vremena treniranja modela koji se izvršavaju na procesoru i na grafičkoj kartici.}
 		\label{fig:cnn_training_time_comparison}
 	\end{figure} 
-	
- 	
-	
-	\subsection{Ostale metode za obradu slike}
-	
-	Opis metoda slijedi\dots
-	
+
+        \subsection{Ostale metode obrade slika}
+        
+        Na slici \ref{fig:ostale_metode} uspoređena su vremena izvođenja na CPU i na GPU Fourierove transformacije, inverzne Fourierove transformacije, Valćine transformacije, konvolucije, uklanjanja šuma, registracija slika, računanja prosječne vrijednosti i standardne devijacije.
+        
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.6\linewidth]{slike/ostale_metode_usporedba.jpg} 
+			\caption{Implementacija metoda za obradu slike. Za svaku metodu tablica prikazuje vrijeme izvođenja na CPU i na GPU.}
+			\label{fig:ostale_metode}
+		\end{figure} 
+				
 	\section{Zaključak}
-	Zaključak treba istaknuti i diskutirati najvažnije rezultate
-	iznesene u tekstu i sugerirati eventualne buduće
-	trendove.
+	Ovaj rad je detaljno analizirao razlike u performansama između centralnih procesorskih jedinica (CPU) i grafičkih procesorskih jedinica (GPU) prilikom izvršavanja različitih metoda obrade slike koristeći NVIDIA CUDA tehnologiju. Prikazane su brojne implementacije algoritama za obradu slike, kao i implementacija neuronske mreže za klasifikaciju rukom pisanih brojeva. U svim slučajevima, implementacije koje su se izvodile na GPU nadmašile su one koje su se izvodile na CPU u pogledu brzine izvršavanja. \newline
+	S obzirom na to da nas u budućnosti očekuje daljnji napredak grafičkih procesora i popratnih tehnologija, gotovo je sigurno da će s vremenom postupci obrade slike biti nezamislivi bez grafičkih procesora. GPU-ovi su pokazali izuzetnu efikasnost, naročito kod obrade velikih skupova podataka i složenih algoritama, što ih čini neophodnim za napredne aplikacije u medicini, industriji, forenzici, autonomnim vozilima i drugim disciplinama. \newline
+	Buduća istraživanja mogla bi biti usmjerena na analizu prijenosa podataka između CPU-a i GPU-a te na potencijalna ubrzanja tog neizbježnog dijela.
+	
 	
 	
 	% Literatura se automatski generira iz zadane liste. Svaki od elemenata liste
 	% zapoèinje s oznakom, npr. \bibitem{davies}. U tekstu se referenca na èlanak
 	% ili knjigu dobiva s \cite{davies}.
-	\begin{thebibliography}{25}
-		
-		\bibitem{davies}
-		E.~R.~Davies.
-		Machine vision: Theory, Algorithms, Practicalities.
-		Academic Press, London, 2. edition, 1997.
-		
-		\bibitem{wood}
-		J.~Lampinen, S.~Smolander, O.~Silv\'{e}n and H. Kauppinen.
-		Wood defect recognition: A comparative study,
-		Workshop on Machine Vision for Advanced Production, Oulu, Finland, p. 7, 1994.
-		
-		\bibitem{izopovrsine}
-		T.~Itoh i K. Koyyamada.
-		Isosurface generation by using extrema graphs,
-		Proceedings of Visualization '94, 1994, pp.~77-83, IEEE Computer Society Press, Los Alamitos, CA.
-		
-		\bibitem{getrichquick}
-		J.~User.
-		A new efficient algorithm for making money,
-		http://www.rich.quick/.
-		
-	\end{thebibliography} 
+
+        \bibliography{literatura}
+
+ 
 	
 \end{document} 

@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: primjer_izvjestaja.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: plain.bst
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Database file #1: literatura.bib
+Warning--entry type for "neural_networks" isn't style-file defined
+--line 12 of file literatura.bib
+Warning--I didn't find a database entry for ""
+You've used 2 entries,
+            2118 wiz_defined-function locations,
+            510 strings with 4229 characters,
+and the built_in function-call counts, 506 in all, are:
+= -- 46
+> -- 14
+< -- 0
++ -- 7
+- -- 4
+* -- 29
+:= -- 89
+add.period$ -- 5
+call.type$ -- 2
+change.case$ -- 8
+chr.to.int$ -- 0
+cite$ -- 2
+duplicate$ -- 18
+empty$ -- 50
+format.name$ -- 4
+if$ -- 105
+int.to.chr$ -- 0
+int.to.str$ -- 2
+missing$ -- 1
+newline$ -- 12
+num.names$ -- 4
+pop$ -- 11
+preamble$ -- 1
+purify$ -- 6
+quote$ -- 0
+skip$ -- 15
+stack$ -- 0
+substring$ -- 32
+swap$ -- 2
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 8
+warning$ -- 0
+while$ -- 5
+width$ -- 3
+write$ -- 21
+(There were 2 warnings)
