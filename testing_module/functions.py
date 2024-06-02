@@ -23,12 +23,36 @@ def perform_ifft(image):
     return ifft2(image)
 
 def perform_wavelet_transform(image, wavelet='db1', level=1):
+    """
+    Perform wavelet transform on an image.
+
+    Parameters:
+    image (numpy.ndarray or cupy.ndarray): The input image.
+    wavelet (str, optional): The wavelet to be used for the transform. Defaults to 'db1'.
+    level (int, optional): The number of decomposition levels. Defaults to 1.
+
+    Returns:
+    list: A list of coefficients resulting from the wavelet transform.
+    """
     if isinstance(image, cp.ndarray):
         image = cp.asnumpy(image)  
     coeffs = pywt.wavedec2(image, wavelet, level=level)
     return coeffs
 
 def perform_convolution(image, kernel):
+    """
+    Perform convolution on an image using a given kernel.
+
+    Args:
+        image (ndarray): The input image.
+        kernel (ndarray): The convolution kernel.
+
+    Returns:
+        ndarray: The convolved image.
+
+    Raises:
+        ValueError: If the image dimensions are unexpected.
+    """
     if image.ndim == 3 and kernel.ndim == 2:
         if isinstance(image, cp.ndarray):
             kernel = cp.asarray(kernel)
@@ -44,6 +68,16 @@ def perform_convolution(image, kernel):
         raise ValueError("Unexpected image dimensions")
 
 def perform_nl_means_denoising(image):
+    """
+    Perform non-local means denoising on the given image.
+
+    Parameters:
+    image (numpy.ndarray or cupy.ndarray): The input image to be denoised.
+
+    Returns:
+    numpy.ndarray: The denoised image.
+
+    """
     if isinstance(image, cp.ndarray):
         image = cp.asnumpy(image)
     sigma_est = np.mean(estimate_sigma(image, channel_axis=-1))
@@ -51,6 +85,17 @@ def perform_nl_means_denoising(image):
 
 
 def perform_image_registration(image1, image2):
+    """
+    Perform image registration using phase cross-correlation.
+
+    Parameters:
+    image1 (numpy.ndarray or cupy.ndarray): The first input image.
+    image2 (numpy.ndarray or cupy.ndarray): The second input image.
+
+    Returns:
+    tuple: A tuple containing the shift, error, and diffphase values obtained from phase cross-correlation.
+    """
+
     if isinstance(image1, cp.ndarray):
         image1 = cp.asnumpy(image1)
     if isinstance(image2, cp.ndarray):
@@ -89,6 +134,17 @@ def sliding_window_detection(image, window_size, step_size, classifier):
     return detections
 
 def perform_inpainting(image, mask):
+    """
+    Perform inpainting on the given image using the provided mask.
+
+    Args:
+        image (numpy.ndarray or cupy.ndarray): The input image.
+        mask (numpy.ndarray or cupy.ndarray): The mask indicating the areas to be inpainted.
+
+    Returns:
+        numpy.ndarray: The inpainted image.
+
+    """
     if isinstance(image, cp.ndarray):
         image = cp.asnumpy(image)
     if isinstance(mask, cp.ndarray):
@@ -96,6 +152,15 @@ def perform_inpainting(image, mask):
     return inpaint.inpaint_biharmonic(image, mask)
 
 def mean_and_std(image):
+    """
+    Calculate the mean and standard deviation of each channel in the given image.
+
+    Parameters:
+    image (numpy.ndarray): The input image.
+
+    Returns:
+    tuple: A tuple containing the mean and standard deviation of the image.
+    """
     channels_means, channels_std = [], []
     for channel in range(image.shape[2]):
         channels_means.append(np.mean(image[:,:,channel]))
